@@ -1,0 +1,145 @@
+$Light-Blue: #a3d0e0;
+$Dark-Blue: #4b5b71;
+$White-color: #fff;
+$input-color: #f3f3f3;
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  background-color: $Light-Blue;
+  color: $Dark-Blue;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#app {
+  padding: 60px 0;
+}
+
+input[type='text'] {
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  padding: 15px;
+  background: $input-color;
+  color: $Dark-Blue;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: border liner 0.3s;
+}
+input[type='text']:focus {
+  outline: none;
+  border: 1px solid $Light-Blue;
+}
+button {
+  cursor: pointer;
+  font: 15px;
+  color: $Dark-Blue;
+  transition: all 0.3 linear;
+}
+button:focus {
+  outline: none;
+}
+h1 {
+  font-size: 22px;
+}
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+// Add TODO
+.task {
+  background-color: $White-color;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 0 40 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.title {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.form {
+  position: relative;
+  margin: 0 0 30px;
+  // display: flex;
+}
+.form .btn-plus {
+  background: none;
+  border: none;
+  color: $Dark-Blue;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.form .btn-plus:hover{
+  color: $Light-Blue;
+
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.clearBtn {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+.clearBtn button {
+  width: 100%;
+  background-color: $Light-Blue;
+  color: $Dark-Blue;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+.clearBtn button:hover {
+  background: $Dark-Blue;
+  color: $White-color;
+}
+.pending {
+  padding: 0 8px;
+}
+// LIST
+.todo-item {
+  display: flex;
+  align-items: center; // 讓所有元素垂直置中
+  justify-content: space-between; // 讓刪除按鈕推到最右邊
+  padding: 0 10px 20px;
+
+  // 完成按鈕
+  .btn-complete {
+    margin-right: 8px; // 調整完成按鈕與文字間距
+  }
+
+  // 刪除按鈕放在最右側
+  .btn-delete {
+    margin-left: auto; // 讓刪除按鈕推到最右邊
+  }
+
+  p {
+    flex: 1; // 讓文字自動填滿中間空間
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  .btn-complete,
+  p {
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  // 讓 hover 時 button 和 p 同時改變
+  &:hover .btn-complete,
+  &:hover p {
+    color: $Light-Blue;
+  }
+}
